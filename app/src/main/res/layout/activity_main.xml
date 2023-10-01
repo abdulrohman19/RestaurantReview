@@ -16,7 +16,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:srcCompat="@tools:sample/background/scenic"/>
+        tools:srcCompat="@tools:sample/backgrounds/scenic"/>
 
     <TextView
         android:id="@+id/tvTitle"
@@ -82,7 +82,7 @@
         android:layout_margin="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/tvReview">
+        app:layout_constraintTop_toBottomOf="@+id/tvReview">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edReview"
@@ -108,10 +108,12 @@
         android:id="@+id/rvReview"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
         android:overScrollMode="never"
         android:scrollbarSize="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/ivPicture"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btnSend" />
 

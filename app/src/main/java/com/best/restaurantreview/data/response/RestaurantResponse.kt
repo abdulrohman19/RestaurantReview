@@ -26,7 +26,7 @@ data class Restaurant(
 	val name: String,
 
 	@field:SerializedName("rating")
-	val rating: Any,
+	val rating: Double,
 
 	@field:SerializedName("description")
 	val description: String,
