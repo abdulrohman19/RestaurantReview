@@ -1,6 +1,7 @@
 package com.best.restaurantreview.data.retrofit
 
 import com.best.restaurantreview.data.response.RestaurantResponse
+import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Path
 
