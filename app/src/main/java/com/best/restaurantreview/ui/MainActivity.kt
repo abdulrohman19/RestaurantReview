@@ -6,15 +6,15 @@ import android.util.Log
 import android.view.View
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.best.restaurantreview.R
 import com.best.restaurantreview.data.response.CustomerReviewsItem
 import com.best.restaurantreview.data.response.Restaurant
 import com.best.restaurantreview.data.response.RestaurantResponse
 import com.best.restaurantreview.data.retrofit.ApiConfig
 import com.best.restaurantreview.databinding.ActivityMainBinding
 import com.bumptech.glide.Glide
+import retrofit2.Call
+import retrofit2.Callback
 import retrofit2.Response
-import javax.security.auth.callback.Callback
 
 class MainActivity : AppCompatActivity() {
 
@@ -26,6 +26,7 @@ class MainActivity : AppCompatActivity() {
     }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 

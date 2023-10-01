@@ -5,44 +5,44 @@ import com.google.gson.annotations.SerializedName
 data class RestaurantResponse(
 
 	@field:SerializedName("restaurant")
-	val restaurant: Restaurant? = null,
+	val restaurant: Restaurant,
 
 	@field:SerializedName("error")
-	val error: Boolean? = null,
+	val error: Boolean,
 
 	@field:SerializedName("message")
-	val message: String? = null
+	val message: String
 )
 
 data class Restaurant(
 
 	@field:SerializedName("customerReviews")
-	val customerReviews: List<CustomerReviewsItem?>? = null,
+	val customerReviews: List<CustomerReviewsItem?>,
 
 	@field:SerializedName("pictureId")
-	val pictureId: String? = null,
+	val pictureId: String,
 
 	@field:SerializedName("name")
-	val name: String? = null,
+	val name: String,
 
 	@field:SerializedName("rating")
-	val rating: Any? = null,
+	val rating: Any,
 
 	@field:SerializedName("description")
-	val description: String? = null,
+	val description: String,
 
 	@field:SerializedName("id")
-	val id: String? = null
+	val id: String
 )
 
 data class CustomerReviewsItem(
 
 	@field:SerializedName("date")
-	val date: String? = null,
+	val date: String,
 
 	@field:SerializedName("review")
-	val review: String? = null,
+	val review: String,
 
 	@field:SerializedName("name")
-	val name: String? = null
+	val name: String
 )
