@@ -17,7 +17,7 @@ data class RestaurantResponse(
 data class Restaurant(
 
 	@field:SerializedName("customerReviews")
-	val customerReviews: List<CustomerReviewsItem?>,
+	val customerReviews: List<CustomerReviewsItem>,
 
 	@field:SerializedName("pictureId")
 	val pictureId: String,

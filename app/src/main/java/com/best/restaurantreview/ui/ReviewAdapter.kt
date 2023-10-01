@@ -2,8 +2,8 @@ package com.best.restaurantreview.ui
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.ListAdapter
 import androidx.recyclerview.widget.DiffUtil
+import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.best.restaurantreview.data.response.CustomerReviewsItem
 import com.best.restaurantreview.databinding.ItemReviewBinding
@@ -14,12 +14,11 @@ class ReviewAdapter : ListAdapter<CustomerReviewsItem, ReviewAdapter.MyViewHolde
         return MyViewHolder(binding)
     }
 
-    override fun onBindingViewHolder(holder: MyViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val review = getItem(position)
-        holder.bind(review)
-    }
+        holder.bind(review)    }
 
-    class MyViewHolder(val binding: ItemReviewBinding) : RecyclerView.ViewHolder(binding.root) {
+    class MyViewHolder(private val binding: ItemReviewBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(review: CustomerReviewsItem){
             binding.tvItem.text = "${review.review}\n- ${review.name}"
         }
