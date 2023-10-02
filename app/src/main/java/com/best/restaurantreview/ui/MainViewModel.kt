@@ -1,6 +1,5 @@
 package com.best.restaurantreview.ui
 
-import android.telecom.Call
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -10,12 +9,13 @@ import com.best.restaurantreview.data.response.PostReviewResponse
 import com.best.restaurantreview.data.response.Restaurant
 import com.best.restaurantreview.data.response.RestaurantResponse
 import com.best.restaurantreview.data.retrofit.ApiConfig
+import retrofit2.Call
+import retrofit2.Callback
 import retrofit2.Response
-import javax.security.auth.callback.Callback
 
 class MainViewModel : ViewModel() {
 
-    private val_restaurant = MutableLiveData<Restaurant>()
+    private val _restaurant = MutableLiveData<Restaurant>()
     val restaurant: LiveData<Restaurant> = _restaurant
 
     private val _listReview = MutableLiveData<List<CustomerReviewsItem>>()
